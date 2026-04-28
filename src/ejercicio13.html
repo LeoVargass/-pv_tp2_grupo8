@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+const cantidad = parseInt(prompt("¿Cuántos números querés ingresar?"));
+
+const numeros = [];
+
+for (let i = 0; i < cantidad; i++) {
+    let num = parseInt(prompt(`Ingrese el número ${i + 1}:`));
+    numeros.push(num);
+}
+
+// función flecha
+const mostrarArreglo = (arr) => {
+    arr.forEach(num => {
+        document.write(num + "<br>");
+    });
+};
+
+mostrarArreglo(numeros);
+</script>
+
+</body>
+</html>
