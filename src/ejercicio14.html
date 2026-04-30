@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 14</title>
+</head>
+<body>
+    <script>
+        const duplicar = (arreglo) => {
+            const nuevoArreglo = [];
+            for (let i = 0; i < arreglo.length; i++) {
+                nuevoArreglo.push(arreglo[i] * 2);
+            }
+            return nuevoArreglo;
+        }
+
+        const cantidad = prompt("¿Cuántos números vas a ingresar?");
+        const numeros = [];
+
+        for (let i = 0; i < cantidad; i++) {
+            let num = prompt(`Ingresa el número ${i + 1}:`);
+            numeros.push(Number(num));
+        }
+
+        const resultado = duplicar(numeros);
+
+        document.write(`Arreglo original: ${numeros} <br> Arreglo duplicado: ${resultado}`);
+    </script>
+</body>
+</html>
