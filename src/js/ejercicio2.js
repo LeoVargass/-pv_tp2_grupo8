@@ -1,3 +1,7 @@
+
+//Agrego nuevamente debido a error de estructuracion
+
+
 const mostrarImpares = () => {
     let numero = 1;
     
