@@ -13,3 +13,4 @@ edades.forEach(edad => {
 const promedio = suma / edades.length;
 
 console.log(`El promedio de las edades es: ${promedio}`);
+//Marcos Ovejero
