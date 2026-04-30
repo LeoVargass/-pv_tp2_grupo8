@@ -2,6 +2,7 @@
 
 import { servicioJoseMesconi } from "../services/serviceJoseMesconi.js";
 import { servicioMarcosOvejero } from "../services/serviceMarcosOvejero.js";
+import { servicioVargasLeonardo } from "../services/serviceVargasLeonardo.js";
 
 
 
