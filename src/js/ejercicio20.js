@@ -1,6 +1,7 @@
 //ASISTENCIA 30/04/26
 
 import { servicioJoseMesconi } from "../services/serviceJoseMesconi.js";
+import { servicioSantiagoUrzagaste } from '../services/servicesSantiagoUrzagaste.js';
 import { servicioMarcosOvejero } from "../services/serviceMarcosOvejero.js";
 import { servicioVargasLeonardo } from "../services/serviceVargasLeonardo.js";
 

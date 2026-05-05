@@ -1,0 +1,7 @@
+import { actualizarTexto } from '../services/servicesEj19.js';
+
+const boton = document.getElementById('btnCambiar');
+
+boton.addEventListener('click', () => {
+    actualizarTexto('textoCambiable', 'Buenas noches ej 19 ');
+});

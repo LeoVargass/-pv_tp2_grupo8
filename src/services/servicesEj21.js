@@ -1,0 +1,15 @@
+export const datosCapitales = {
+    "AR": "Buenos Aires",
+    "MX": "Ciudad de México",
+    "PAR": "Asunción",
+    "COL": "Bogotá",
+    "VEN": "Caracas",
+    "BR": "Brasilia"
+};
+
+
+export const limpiarSelect = (elemento) => {
+    while (elemento.options.length > 1) {
+        elemento.remove(1);
+    }
+};

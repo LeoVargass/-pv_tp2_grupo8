@@ -1,0 +1,25 @@
+import { datosCapitales, limpiarSelect } from '../services/servicesEj21.js';
+
+const selectPaises = document.getElementById('paises');
+const selectCapitales = document.getElementById('capitales');
+
+selectPaises.addEventListener('change', (e) => {
+    const isoPais = e.target.value; 
+
+    limpiarSelect(selectCapitales);
+
+    const nombreCapital = datosCapitales[isoPais];
+
+    if (nombreCapital) {
+        const nuevaOpcion = document.createElement('option');
+        
+        nuevaOpcion.value = nombreCapital; 
+        nuevaOpcion.textContent = nombreCapital;
+        
+        selectCapitales.appendChild(nuevaOpcion);
+
+        selectCapitales.disabled = false;
+    } else {
+        selectCapitales.disabled = true;
+    }
+});

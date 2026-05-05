@@ -1,4 +1,3 @@
-import { servicioSantiagoUrzagaste } from './servicesSantiagoUrzagaste.js';
 
 export const guardarEstudianteEnArray = (estudiante) => {
 
