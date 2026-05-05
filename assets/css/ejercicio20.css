@@ -1,0 +1,221 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f0f2f7;
+  --surface: #ffffff;
+  --surface-2: #f7f8fc;
+  --border: #dde2ee;
+  --border-accent: #b0bcda;
+  --green: #0a7a55;
+  --green-dim: #0f9e6e;
+  --green-glow: rgba(10, 122, 85, 0.10);
+  --text: #1e2540;
+  --text-dim: #8090b0;
+  --text-mono: #1a6e4a;
+  --danger: #e03244;
+  --amber: #d97a0a;
+}
+
+html { height: 100%; }
+
+body {
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(rgba(10, 122, 85, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 122, 85, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--text);
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(30, 37, 64, 0.08);
+}
+
+.card::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--green);
+}
+
+.card::after {
+  content: '● ● ●  FORM — REGISTRO_ESTUDIANTE.SYS';
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+.card h1 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--green);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 1.75rem 1.75rem 0;
+}
+
+.card h1::before {
+  content: '>';
+  color: var(--text-dim);
+}
+
+.card h1::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-accent), transparent);
+  margin-left: 6px;
+}
+
+.Subtitle {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  padding: 0.4rem 1.75rem 1.4rem;
+}
+
+form {
+  padding: 0 1.75rem 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 0.45rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text-mono);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  padding: 0.6rem 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover {
+  border-color: var(--border-accent);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: var(--green-dim);
+  box-shadow: 0 0 0 3px var(--green-glow);
+}
+
+input::placeholder {
+  color: var(--border-accent);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+input[type="number"] { -moz-appearance: textfield; }
+
+
+#btn-procesar {
+  width: 100%;
+  margin-top: 0.5rem;
+  background: var(--green);
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+#btn-procesar:hover {
+  background: var(--green-dim);
+}
+
+#btn-procesar:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--green-glow);
+}
+
+#btn-procesar:active {
+  transform: scale(0.99);
+}
+
+.display-area {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(30, 37, 64, 0.08);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: var(--text-mono);
+  letter-spacing: 0.06em;
+  padding: 1.25rem 1.75rem;
+  min-height: 3.5rem;
+}
+
+.display-area::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--green);
+  margin: -1.25rem -1.75rem 1rem;
+}
+
+.display-area:empty {
+  display: none;
+}
