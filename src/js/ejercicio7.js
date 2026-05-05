@@ -11,3 +11,4 @@ nombres.forEach(nombre => {
 });
 
 console.log(`El nombre más largo es: ${nombreMasLargo}`);
+// Ejercicio 7 - Julieta Ortega
