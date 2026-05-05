@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+}
+
+p.subtitulo {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.opcion-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.label-resultado {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+// paleta saca de colorhuntt
+.resultado-box {
+    background-color: #eef2ff;
+    border: 1px solid #c0c8f0;
+    border-radius: 6px;
+    padding: 14px;
+    min-height: 50px;
+}
+
+#resultado {
+    color: #333;
+    font-size: 0.95rem;
+}
