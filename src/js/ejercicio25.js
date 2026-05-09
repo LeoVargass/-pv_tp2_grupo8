@@ -1,22 +1,8 @@
-const boton = document.querySelector("#btnCambiarColor");
+import { cambiarColorFondo } from "../services/servicesEj25.js";
 
-const colores = [
-    "red",
-    "blue",
-    "green",
-    "yellow",
-    "purple",
-    "orange",
-    "pink"
-];
+const cuerpo = document.getElementById("cuerpo");
+const btnCambiarColor = document.getElementById("btnCambiarColor");
 
-const cambiarColor = () => {
-    const numeroAleatorio = Math.floor(Math.random() * colores.length);
-    const colorElegido = colores[numeroAleatorio];
-
-    document.body.style.backgroundColor = colorElegido;
-
-    console.log(`El color de fondo cambió a: ${colorElegido}`);
-};
-
-boton.addEventListener("click", cambiarColor);
+btnCambiarColor.addEventListener("click", () => {
+    cambiarColorFondo(cuerpo);
+});
